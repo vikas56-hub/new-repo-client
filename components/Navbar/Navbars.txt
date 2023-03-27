@@ -1,0 +1,90 @@
+///Navbar
+.Navbar-section {
+  background-color: white;
+  // background-color: #F6F5EE;
+
+  .Navbar-Main {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    .Navbar-logo {
+      font-weight: 900;
+      font-size: 20px;
+    }
+    .Nav-links{
+      display: flex;
+align-items: center;
+justify-content: space-between;
+    }
+    .Navbar-Links {
+      display: flex;
+      flex-direction: row;
+      font-size: 17px;
+      font-weight: 100;
+      gap: 20px;
+
+
+       a {
+        color: #323232;
+        text-decoration: none;
+        // color: black;
+      }
+    }
+    .Navbar-Auth {
+      button {
+        padding: 14px 28px;
+        margin-inline: 10px;
+      }
+    }
+
+
+    
+  }
+ 
+}
+ .nav-toggle{
+  display: none;
+}
+// .nav-toggle {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: 9999;
+//   width: 24px;
+//   height: 24px;
+
+//   i {
+//     font-size: 24px;
+//   }
+// }
+@media screen and (max-width:991px){
+    .nav-toggle{
+        display: block;
+        margin-right:20px ;
+    }
+    .Navbar-Main{
+        overflow: initial;
+
+    }
+    .Nav-links{
+            position: absolute;
+            background-color: white;
+            left: -100% ;
+            top: 100% ;
+            width: 100%;
+            padding-block: 20px ;
+            transition: 0.2s ease-in-out;
+    }
+    .Nav-links.active{
+        left: 0;
+
+    }
+    .Nav-links{
+        flex-direction: column;
+        .Navbar-Links{
+            flex-direction: column;
+
+        }
+    }}

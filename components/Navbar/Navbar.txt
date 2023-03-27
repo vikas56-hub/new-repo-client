@@ -1,0 +1,63 @@
+import React from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaBars, FaTimes} from 'react-icons/fa';
+import "./Navbar.scss"
+function Navbar() {
+  const [click, setclick] = useState(false);
+  const handleClick = () => setclick(!click);
+
+  return (
+    <nav>
+      <div className="Navbar-section">
+        <div className="Navbar-Main  container">
+          <div className="Navbar-logo">
+            <h1>Manav Kumar</h1>
+          </div>
+          <div className={click ? "Nav-links active" : "Nav-links"}>
+          <div className="Navbar-Links">
+            <Link to="/"> Home </Link>
+            <Link to="/"> Cources </Link>
+            <Link to="/"> Mentor </Link>
+            <Link to="/"> About </Link>
+          </div>
+          <div className="Navbar-Auth">
+            <button
+              // onClick={(event) => event.preventDefault()}
+              className="soild-button"
+            >
+              <Link to="/login">Login</Link>
+            </button>
+            <button
+              // onClick={(event) => event.preventDefault()}
+              className="border-button"
+            >
+              <Link to="/register">Sign-up</Link>
+            </button>
+            </div>
+            </div>
+          <div
+            className="nav-toggle hover-link"
+            onClick={handleClick}
+          >
+            {click ? (
+              // <i className="fa-solid fa-times"/>
+              <FaTimes
+                size={40}
+                style={{ color: "#c0c0c0 ",}}
+              />
+            ) : (
+              // <i className="fa-solid fa-bars"/>
+              <FaBars
+                size={40}
+                style={{ color: '#c0c0c0 ', }}
+              />
+            )}
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;

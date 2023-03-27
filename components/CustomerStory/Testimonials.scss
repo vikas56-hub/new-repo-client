@@ -1,0 +1,152 @@
+.Testimonial-section {
+  //   background-color: #f7f5ee;
+  padding: 20px 10px;
+}
+
+.Testimonial-card {
+  min-width: 350px;
+
+  height: 170px;
+  display: flex;
+  align-items: center;
+  
+  //   background: #fff;
+  // background-color: rgb(181, 75, 158);
+
+  // border: 2px solid black;
+
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+
+  margin: 0 10px ;
+  cursor: pointer;
+  padding: 10px;
+
+  transition: all 0.25s ease;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    transform: translate(0, -10px);
+    box-shadow: 0px 17px 35px 0px rgba(0, 0, 0, 0.07);
+  }
+
+  h4 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px;
+  }
+
+  .Testimonial-card-text {
+    padding: 20px 10px;
+
+    .Testimonial-review {
+      font-size: 0.9rem;
+      opacity: 0.6;
+      margin-top: 10px;
+    }
+    h2 {
+      font-weight: 700;
+    }
+    .reviewer {
+      .reviewer-name {
+        font-size: 0.9rem;
+        font-weight: 700;
+        //   opacity: 0.6;
+        margin-top: 10px;
+      }
+      .reviewer-desigination {
+        font-size: 0.8rem;
+        opacity: 0.6;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .Testimonial-card-img {
+    // transform: translate(90px, -10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.35s ease-out;
+    // background-color: red;
+    border-radius: 5px;
+    // margin: 20px 20px;
+    background: cover;
+    overflow: hidden;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    padding: 20px 0px;
+    scroll-behavior: smooth;
+
+    // for Annoying default scrollbar horizontal
+    &::-webkit-scrollbar {
+      height: 0px;
+    }
+
+    // &:after {
+    //   content: '';
+    //   display: block;
+    //   min-width: 20px;
+    //   height: 100px;
+    //   position: relative;
+    // }
+  }
+}
+.Testimonial-heading-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  .Testimonial-Heading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+    h1 {
+      width: 100%;
+      font-size: 45px;
+    }
+    p {
+      width: 100%;
+      font-size: 20px;
+      color: #757575;
+    }
+    padding: 20px 0;
+  }
+
+  .Testimonial-buttons {
+    display: flex;
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 20px;
+    width: 30%;
+
+    button {
+      padding: 5px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .scroll-button-right {
+      border: 1px solid black;
+      background-color: black;
+    }
+    .scroll-button-left {
+      border: 1px solid black;
+      background-color: transparent;
+    }
+  }
+}
